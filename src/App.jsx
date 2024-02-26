@@ -7,14 +7,19 @@ import CoffeeCard from './Components/CoffeeCard'
 
 function App() {
 const loadedCoffees= useLoaderData()
-console.log(loadedCoffees)
+
+const [coffees, setCoffees]= useState(loadedCoffees)
+
+console.log(coffees)
   return (
     <>
-      <h1 className='text-6xl text-purple-600 text-center'>coffee conference : {loadedCoffees.length}</h1>
+      <h1 className='text-6xl text-purple-600 text-center'>coffee conference : {coffees.length}</h1>
       {
-        loadedCoffees.map(coffee=> <CoffeeCard key={coffee._id}
+        coffees.map(coffee=> <CoffeeCard key={coffee._id}
            coffee={coffee}
-           
+           setCoffees={setCoffees}
+           coffees={coffees}
+
 
           
           ></CoffeeCard>)
