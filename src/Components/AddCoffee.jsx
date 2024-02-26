@@ -80,6 +80,7 @@ const AddCoffee = () => {
                                 <span className="label-text font-bold">Photo</span>
                             </label>
                             <label className="input-group ">
+                                
                                 <input type="text"  placeholder="enter photo url" className="input w-full input-bordered" />
                             </label>
                         </div>
